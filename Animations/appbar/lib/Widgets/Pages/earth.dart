@@ -14,7 +14,7 @@ class _EarthState extends State<Earth> {
     "Earth has a powerful magnetic field.",
     "There is only one natural satellite of the planet Earth.",
     "Earth is only named after God",
-    "assets/jupiter.png"
+    "assets/earth1.png"
 
   ];
   @override

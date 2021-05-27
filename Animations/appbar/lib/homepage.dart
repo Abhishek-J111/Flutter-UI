@@ -2,7 +2,9 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'Widgets/Pages/earth.dart';
+import 'Widgets/Pages/jupiter.dart';
 import 'Widgets/Pages/mars.dart';
+import 'Widgets/Pages/moon.dart';
 import 'Widgets/animatedAppBar.dart';
 class HomePage extends StatefulWidget {
   @override
@@ -17,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState(){
     super.initState();
-    _listPages..add(Mars())..add(Earth());
+    _listPages..add(Mars())..add(Earth())..add(Moon())..add(Jupiter());
     _currentPage = Mars();
   }
 
@@ -35,14 +37,27 @@ class _HomePageState extends State<HomePage> {
         ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
+      
+        selectedFontSize: 20.0,
+        unselectedFontSize: 10.0,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.filter_1_outlined),
-            label: 'Mars'
+            label: 'Mars',
+            backgroundColor: Colors.blue.shade400
+            
             ),
             BottomNavigationBarItem(
             icon: Icon(Icons.filter_2_outlined),
             label: 'Earth'
+            ),
+            BottomNavigationBarItem(
+            icon: Icon(Icons.filter_3_outlined),
+            label: 'Moon'
+            ),
+            BottomNavigationBarItem(
+            icon: Icon(Icons.filter_4_outlined),
+            label: 'Jupiter'
             ),
             
         ],

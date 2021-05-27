@@ -109,7 +109,7 @@ Facts(this.text);
             padding: const EdgeInsets.all(8.0),
             child: Card(
               shape: RoundedRectangleBorder(
-                
+                borderRadius: BorderRadius.only(bottomRight: Radius.circular(20.0))
               ),
               elevation: 5.0,
               color: Colors.blueGrey.shade400,
